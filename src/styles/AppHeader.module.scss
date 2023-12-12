@@ -1,0 +1,26 @@
+.menuNavLink {
+  border-radius: 0.25rem;
+  color: black;
+  padding: 0.25rem;
+}
+
+.activeMenuNavLink {
+  background-color: rgba(#1976d2, 0.85);
+  color: white !important;
+}
+
+.navLink {
+  background-color: transparent;
+  color: white;
+  padding: 0.25rem 0.5rem;
+}
+
+.navLink:hover {
+  color: inherit;
+  opacity: 0.75;
+}
+
+.active {
+  border-bottom: solid thin white;
+  opacity: 0.75;
+}

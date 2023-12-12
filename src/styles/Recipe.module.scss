@@ -1,0 +1,111 @@
+.recipeHeaderContainer {
+  border: thin solid white;
+  height: 42.5vh;
+  max-height: 42.5vh;
+  border-radius: 0.5rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.formContentContainer {  
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.ingredientContainer {
+  display: flex;  
+  font-size: 1.2rem;
+  margin: 0 0.5rem 0.5rem 0;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  border-left: thin dashed white;
+  display: flex;
+  width: 95%
+}
+
+.padHalfLeft {
+  padding-left: 0.5rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 35vh;
+}
+
+.padHalfLeft:hover {
+  overflow-y: scroll;
+}
+
+.recipeDetailColumn {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: thin solid white;
+  border-radius: 0.25rem;
+  text-align: left;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.stepColumn {
+  padding-right: 0.5rem;
+}
+
+.stepContainer {
+  display: flex;
+  margin-left: 1rem;
+  width: 95%;
+}
+
+.opacityBackground {
+  background-color: rgba($color: #242424, $alpha: 0.85);
+}
+
+.recipeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // padding: 1rem 0;
+  width: 100%;
+}
+
+.recipeContentContainer {
+  display: flex;
+  // width: 97.5vw;
+  max-height: 45vh;
+}
+
+.recipeHeaderTextContainer {
+  background-color: rgba($color: #242424, $alpha: 0.85);
+  border: thin solid white;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  text-align: left;
+  width: fit-content;
+}
+
+.recipeTitleContainer {
+  font-size: 1.5rem;
+}
+
+.recipeDescriptionContainer {
+  font-size: 1.2rem;
+  max-height: 15vh;
+  max-width: 75%;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .recipeContentContainer {
+    flex-direction: column;
+  }
+
+  .recipeDetailColumn {
+    width: auto;
+  }
+
+  .recipeDescriptionContainer {
+    width: auto;
+    max-width: none;
+  }
+}

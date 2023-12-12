@@ -1,0 +1,14 @@
+.container {
+  cursor: pointer;
+}
+
+.container:hover {
+  opacity: 0.75;
+}
+
+.header {
+  font-size: 1.75rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

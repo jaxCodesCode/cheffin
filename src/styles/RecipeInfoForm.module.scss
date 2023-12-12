@@ -1,0 +1,61 @@
+.formContainer {
+  align-items: flex-start;
+  border: thin dashed white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90vw;
+  height: 42.5vh;
+  max-height: 42.5vh;
+  border-radius: 0.5rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.formContentContainer {
+  padding: 0.5rem;
+  display: flex; 
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.inputContainer {
+  height: 3rem;
+  position: relative;
+}
+
+.titleInputContainer {
+  width: 60%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.descriptionInputContainer {
+  width: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.servesInputContainer {
+  width: 5%;
+  min-width: 50px;
+}
+
+.imageInput {
+  background-color: rgba($color: #242424, $alpha: 0.85);
+  border: thin dashed white;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.imageInput:hover {
+  border-color: #1976d2;
+}
+
+.hideInput {
+  display: none;
+}

@@ -1,0 +1,66 @@
+.formContainer {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: thin dashed white;
+  border-radius: 0.25rem;
+  text-align: left;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.formInput {
+  background-color: rgba($color: #242424, $alpha: 0.85);
+  border: thin dashed white;
+  border-radius: 0.25rem;
+  color: white;
+  left: 0;
+  outline: none;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  transition: all 240ms ease-in;
+  width: 60%;
+  width: 100%;
+}
+
+.formInput:hover {
+  border-color: #1976d2 !important;
+}
+
+.formInput:focus {
+  border-color: #1976d2;
+}
+
+.formInput:focus ~ .formLabel,
+.formInput:not(:placeholder-shown).formInput:not(:focus) ~ .formLabel {
+  font-size: 0.8rem;
+  left: 0.8rem;
+  padding: 0 0.25rem;
+  top: -0.6rem;
+}
+
+.formInput:not(:placeholder-shown) {
+  border: solid #1976d2;
+}
+
+.formLabel {
+  background-color: rgba($color: #242424, $alpha: 1);
+  border-radius: 0.25rem;
+  color: white;
+  cursor: text;
+  position: absolute;
+  left: 0.6rem;
+  top: 0.2rem;
+  font-size: 1rem;
+  transition: 
+    color 200ms ease-in,
+    top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+
+@media only screen and (max-width: 700px) {
+  .formContainer {
+    width: auto
+  }
+}

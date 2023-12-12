@@ -1,0 +1,18 @@
+.formsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailFormsContainer {
+  display: flex;
+  width: 90%;
+  max-height: 40vh;
+}
+
+@media only screen and (max-width: 700px) {
+  .detailFormsContainer {
+    flex-direction: column;
+    max-height: none;
+  }
+}
