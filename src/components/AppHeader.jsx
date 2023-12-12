@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,10 +8,8 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { NavLink, Outlet } from 'react-router-dom';
 import componentStyles from '@/styles/AppHeader.module.scss';
 import PropTypes from 'prop-types'
@@ -32,7 +29,7 @@ function AppHeader({ handleLogout }) {
   
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="fixed" sx={{ height: { xs: '56px', sm: '65px' }}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* App icon and title - medium or bigger */}
@@ -145,8 +142,10 @@ function AppHeader({ handleLogout }) {
           </Toolbar>
         </Container>
       </AppBar>
-
-      <Outlet />
+      
+      <div className={componentStyles.outletContainer}>
+        <Outlet />
+      </div>
     </>
   );
 }

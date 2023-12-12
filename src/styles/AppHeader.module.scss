@@ -24,3 +24,13 @@
   border-bottom: solid thin white;
   opacity: 0.75;
 }
+
+.outletContainer {
+  margin-top: 65px;
+}
+
+@media only screen and (max-width: 600px) {
+  .outletContainer {
+    margin-top: 56px;
+  }
+}
