@@ -1,11 +1,10 @@
 .screenContainer {
   padding: 1rem;
-  // overflow: hidden;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 700px) {
   .screenContainer {
-    // overflow-y: scroll;
     max-height: 88vh;
     margin-bottom: 5rem;
   }
