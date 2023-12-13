@@ -26,7 +26,6 @@ a:hover {
 html, body {
   min-width: 100%;
   min-height: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -69,11 +68,5 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  html, body {
-    overflow: auto;
   }
 }
