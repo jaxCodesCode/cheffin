@@ -1,33 +1,7 @@
 #root {
-  min-height: 100vh;
-  min-width: 100vw;
   margin: 0 auto;
   text-align: center;
 }
-
-/* .firebaseui-container {
-  background-color: #1976d2 !important;
-}
-
-.firebaseui-subtitle, .firebaseui-title {
-  color: white !important;
-}
-
-.firebaseui-label {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.firebaseui-textfield.mdl-textfield .firebaseui-input {
-  border-color: rgba(24, 24, 24, 0.8) !important;
-}
-
-.mdl-textfield__input {
-  border-bottom-color: rgba(24, 24, 24, 0.8) !important;
-}
-
-.firebaseui-input {
-  color: white !important;
-} */
 
 ::-webkit-scrollbar {
   background-color: transparent;
@@ -38,4 +12,10 @@
   background-color: #242424;
   border-radius: 4px;
   border: thin solid white;
+}
+
+@media only screen and (max-width: 700px) {
+  #root {
+    padding-bottom: 5rem;
+  }
 }
