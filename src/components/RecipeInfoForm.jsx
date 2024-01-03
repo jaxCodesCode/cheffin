@@ -60,8 +60,7 @@ const RecipeInfoFormI = (_, ref) => {
           </label>
           <input id='imageInput' 
                 type='file' 
-                accept='image/*' 
-                capture 
+                accept='image/*'  
                 onChange={(e) => onImageUpload(e)}
                 className={componentStyles.hideInput}/> 
         </div>
