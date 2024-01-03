@@ -32,7 +32,7 @@ function App() {
   ])
 
   return (
-    <Container disableGutters>
+    <Container disableGutters sx={{ maxHeight: '100vh'}}>
       <RouterProvider router={router}/>
     </Container>
   );
