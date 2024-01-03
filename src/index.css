@@ -76,12 +76,12 @@ button:focus-visible {
 }
 
 
-/* @media only screen and (max-width: 700px) {
+@media only screen and (min-width: 700px) {
   body {
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
 
   html {
     overflow-y: hidden;
   }
-} */
+}

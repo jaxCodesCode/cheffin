@@ -6,6 +6,7 @@ import RecipesScreen from './screens/RecipesScreen';
 import RecipeScreen from './screens/RecipeScreen';
 import NewRecipeScreen from './screens/NewRecipeScreen';
 import { Container } from '@mui/material';
+import componentStyles from './styles/App.module.scss'
 
 function App() {
   
@@ -32,7 +33,7 @@ function App() {
   ])
 
   return (
-    <Container disableGutters sx={{ maxHeight: '100vh'}}>
+    <Container disableGutters sx={{ maxHeight: '100vh'}} className={componentStyles.scrollable}>
       <RouterProvider router={router}/>
     </Container>
   );
