@@ -13,9 +13,3 @@
   border-radius: 4px;
   border: thin solid white;
 }
-
-@media only screen and (max-width: 700px) {
-  #root {
-    padding-bottom: 5rem;
-  }
-}

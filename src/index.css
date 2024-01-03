@@ -26,6 +26,7 @@ a:hover {
 html, body {
   min-width: 100%;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -50,13 +51,13 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+/* button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -68,5 +69,16 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  html {
+    overflow-y: hidden;
   }
 }

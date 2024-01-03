@@ -28,14 +28,14 @@ const RecipesScreen = () => {
   return (
     <>
       <div className={componentStyles.screenContainer}>
-        <Container sx={{padding: '1rem' }}>
-          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            {recipes.map((recipe) => (
-              <Grid item xs={2} sm={4} md={4} key={recipe.id}>
-                <RecipePreview key={recipe.id} recipe={recipe}></RecipePreview>
-              </Grid>
-            ))}
-          </Grid>
+        <Container >
+        <Grid container spacing={2}>
+          { recipes.map((recipe) => (
+            <Grid key={recipe.id} item xs={12} sm={6} md={4}>
+              <RecipePreview recipe={recipe} />
+            </Grid>
+          ))}
+        </Grid>
         </Container>
       </div>
     </>

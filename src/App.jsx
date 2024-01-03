@@ -5,6 +5,7 @@ import AppContainer from './components/AppContainer';
 import RecipesScreen from './screens/RecipesScreen';
 import RecipeScreen from './screens/RecipeScreen';
 import NewRecipeScreen from './screens/NewRecipeScreen';
+import { Container } from '@mui/material';
 
 function App() {
   
@@ -31,7 +32,9 @@ function App() {
   ])
 
   return (
-    <RouterProvider router={router}/>
+    <Container disableGutters>
+      <RouterProvider router={router}/>
+    </Container>
   );
 }
 
