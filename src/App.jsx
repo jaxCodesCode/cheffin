@@ -7,6 +7,7 @@ import RecipeScreen from './screens/RecipeScreen';
 import NewRecipeScreen from './screens/NewRecipeScreen';
 import { Container } from '@mui/material';
 import componentStyles from './styles/App.module.scss'
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   
