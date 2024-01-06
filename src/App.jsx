@@ -26,7 +26,10 @@ function App() {
         },
         {
           path: 'new-recipe',
-          element: <NewRecipeScreen />
+          element: <ProtectedRoute>
+            <NewRecipeScreen />
+          </ProtectedRoute>
+        },
         }
       ]
     }

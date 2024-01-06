@@ -15,7 +15,8 @@ const AppContainer = () => {
         setCurrentUser({ 
           email: user.email, 
           uid: user.uid, 
-          displayName: user.displayName
+          displayName: user.displayName,
+          isAnonymous: user.isAnonymous
         })
         navigate(window.location.pathname === '/' ? '/recipes' : window.location.pathname);
       } else {

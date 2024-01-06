@@ -13,10 +13,14 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { NavLink, Outlet } from 'react-router-dom';
 import componentStyles from '@/styles/AppHeader.module.scss';
 import PropTypes from 'prop-types'
-
-const pages = [{title: 'My Recipes', route: 'recipes'}, {title: 'New Recipe', route: '/new-recipe'}];
+import { auth } from '../firebaseconfig';
 
 function AppHeader({ handleLogout }) {
+  const pages = [
+    {title: 'Recipes', route: 'recipes', display: true}, 
+    {title: 'New Recipe', route: '/new-recipe', display: !auth.currentUser.isAnonymous}
+  ];
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -81,19 +85,20 @@ function AppHeader({ handleLogout }) {
                   display: { xs: 'block', sm: 'none' },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                    {/* <Typography textAlign="center">{page.title}</Typography> */}
-                    <NavLink key={page.title}
-                      to={page.route} 
-                      className={({isActive}) => [
-                        componentStyles.menuNavLink,
-                        isActive ? componentStyles.activeMenuNavLink : ''
-                      ].join(' ')}>
-                  {page.title}
-                </NavLink>
-                  </MenuItem>
-                ))}
+                {pages.map((page) => {
+                  if (page.display) {
+                    return (<MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                              <NavLink key={page.title}
+                                to={page.route} 
+                                className={({isActive}) => [
+                                  componentStyles.menuNavLink,
+                                  isActive ? componentStyles.activeMenuNavLink : ''
+                                ].join(' ')}>
+                                {page.title}
+                              </NavLink>
+                            </MenuItem>)
+                  }
+                })}
               </Menu>
             </Box>
 
@@ -119,16 +124,20 @@ function AppHeader({ handleLogout }) {
 
             {/* App links - medium and bigger */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
-              {pages.map((page) => (
-                <NavLink key={page.title}
-                      to={page.route} 
-                      className={({isActive}) => [
-                        componentStyles.navLink,
-                        isActive ? componentStyles.active : ''
-                      ].join(' ')}>
-                  {page.title}
-                </NavLink>
-              ))}
+              {pages.map((page) => {
+                if (page.display) {
+                  return (
+                    <NavLink key={page.title}
+                          to={page.route} 
+                          className={({isActive}) => [
+                            componentStyles.navLink,
+                            isActive ? componentStyles.active : ''
+                          ].join(' ')}>
+                      {page.title}
+                    </NavLink>
+                  )
+                }
+              })}
             </Box>
 
             {/* Logout Button */}
